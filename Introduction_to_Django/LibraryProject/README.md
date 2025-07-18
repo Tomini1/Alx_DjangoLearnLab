@@ -1,7 +1,8 @@
-`📚 LibraryProject`
-This is a beginner Django project built as part of the ALX Back-End curriculum. It introduces core concepts of Django development, including project setup, model creation, database operations, and admin interface customization.
+**`📚 LibraryProject`**
 
-**What’s Inside**
+This is a beginner Django project built as part of the ALX Back-End curriculum.
+
+**`Contents`**
 
 Django Project: LibraryProject
 
@@ -15,7 +16,7 @@ author (CharField, max_length=100)
 
 publication_year (IntegerField)
 
-**Features**
+**`Features`**
 
 Full CRUD operations using Django ORM
 
@@ -33,7 +34,7 @@ create.md, retrieve.md, update.md, delete.md
 
 CRUD_operations.md (summary)
 
-**How to Run**
+**`How to Run`**
 
 python manage.py makemigrations
 

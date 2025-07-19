@@ -14,3 +14,25 @@ def books_in_library(library_name):
 def librarian_for_library(library_name):
     library = Library.objects.get(name=library_name)
     return Librarian.objects.get(library=library)
+
+author_name = 'Chinua Achebe'
+author = Author.objects.get(name=author_name)
+books_by_author = Book.objects.filter(author=author)
+
+for book in books_by_author:
+    print(book.title)
+
+
+library_name = 'Central Library'
+library = Library.objects.get(name=library_name)
+books_in_library = library.books.all()
+
+for book in books_in_library:
+    print(book.title)
+
+
+library_name = 'Central Library'
+library = Library.objects.get(name=library_name)
+librarian = Librarian.objects.get(library=library)
+
+print(librarian.name)

@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import ExampleForm
 from .forms import BookSearchForm
 from django.contrib.auth.decorators import permission_required
 
@@ -15,8 +15,6 @@ def secure_form_view(request):
     return render(request, 'bookshelf/form_example.html', {'form': form})
 
 
-
-
 @permission_required('bookshelf.can_create', raise_exception=True)
 def create_book(request):
     # Your view logic here
@@ -26,3 +24,4 @@ def create_book(request):
 def delete_book(request, book_id):
     # Your view logic here
     pass
+

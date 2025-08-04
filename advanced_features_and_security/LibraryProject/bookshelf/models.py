@@ -14,6 +14,18 @@ class Book(models.Model):
         return f"{self.title} by {self.author} ({self.publication_year})"
     
 
+class Book(models.Model):
+    title = models.CharField(max_length=255)
+    author = models.CharField(max_length=255)
+    publication_year = models.IntegerField()
+
+    class Meta:
+        permissions = [
+            ("can_view", "Can view book"),
+            ("can_create", "Can create book"),
+            ("can_edit", "Can edit book"),
+            ("can_delete", "Can delete book"),
+        ]
 
 class CustomUserManager(BaseUserManager):
     def create_user(self, username, email=None, password=None, **extra_fields):
@@ -43,4 +55,5 @@ class CustomUser(AbstractUser):
 
     def __str__(self):
         return self.username
+
 

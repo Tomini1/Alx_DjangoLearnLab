@@ -1,0 +1,10 @@
+{% extends 'blog/base.html' %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+    <div class="home-banner">
+        <img src="{% static 'blog/images/logo.png' %}" alt="Blog Logo" class="logo">
+        <h2>Welcome to My Django Blog</h2>
+        <p>Explore articles, insights, and stories from our authors.</p>
+        <a href="{% url 'post_list' %}" class="btn">View All Posts</a>
+    </div>
+{% endblock %}
